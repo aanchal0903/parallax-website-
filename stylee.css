@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    margin-bottom: 0px  ;
+}
+
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+     perspective: 40px;  
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;  
+    /* iske bina 3d effect nahi ayga hum jo chahte h nai toh 2d ayga 
+     */
+     height: 100%;
+     z-index: -1;
+     /* z index is for konsi image kisske upar aa rhi hai i.e for overlapping  */
+
+}
+.background{
+    transform: translateZ(-50px)scale(6);
+}
+.foreground{
+    transform: translateZ(-20px)scale(2);
+}
+.background,.foreground{
+    position: absolute;
+   height: 100%;
+   width: 100%;
+    z-index: -1;
+    object-fit: cover;
+
+    /* object fit ka matlab hai fit image in container */
+}
+h1{
+    color: #ffffff;
+    font-size: 9rem  ;
+    top:5rem;
+    position: absolute;
+    text-shadow: rgb(214, 210, 210);
+}
+section{
+    background-color: rgb(45 ,45, 45 );
+    color: white;
+    padding: 5rem  0 ;
+}
+.secHeading{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+ 
+.text{
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0 ;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    scroll-behavior: smooth;
+    background-attachment: fixed;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+.desc{
+    position: absolute;
+    background-color: #ffffff;
+    padding: 0.5rem;
+    color: grey;
+    top: 50%;
+    left: 55%;
+    transform: translateX(-50%) translateX(-50%) ;
+    font-size: 3.5rem;
+    font-weight: 600;
+
+}
+.bg1{
+    background-image: url(sport-1.jpg);
+}
+.bg2{
+    background-image: url(sport-2.jpg);
+}
+.bg3{
+    background-image: url(sport-3.jpg);
+}
